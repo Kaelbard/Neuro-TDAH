@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Extensão TDAH",
+  "version": "1.0.1",
+  "description": "Uma extensão para ajudar neurodivergentes com TDAH, alternando entre metade das letras em negrito e normais.",
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "action": {
+    "default_icon": "icon48.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "storage"
+],
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content_script.js"]
+    }
+  ]
+}
